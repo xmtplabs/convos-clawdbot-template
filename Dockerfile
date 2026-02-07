@@ -24,7 +24,7 @@ WORKDIR /openclaw
 # Bump OPENCLAW_CACHE_BUST to force a fresh clone (invalidates Docker cache)
 ARG OPENCLAW_CACHE_BUST=22
 ARG OPENCLAW_GIT_REPO=https://github.com/xmtplabs/openclaw.git
-ARG OPENCLAW_GIT_REF=yewreeka/convos-channel
+ARG OPENCLAW_GIT_REF=feat/xmtp-and-convos-extensions
 RUN git clone --depth 1 --branch "${OPENCLAW_GIT_REF}" "${OPENCLAW_GIT_REPO}" .
 
 # Patch: relax version requirements for packages that may reference unpublished versions.
