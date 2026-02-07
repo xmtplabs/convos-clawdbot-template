@@ -361,7 +361,7 @@
       if (data.inviteUrl && typeof QRCode !== 'undefined' && qrWrap) {
         try {
           qrWrap.innerHTML = '';
-          new QRCode(qrWrap, { text: data.inviteUrl, width: 100, height: 100 });
+          new QRCode(qrWrap, { text: data.inviteUrl, width: 200, height: 200 });
           qrWrap.style.display = 'block';
           if (qrImg) qrImg.style.display = 'none';
         } catch (err) {
