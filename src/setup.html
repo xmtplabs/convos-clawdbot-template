@@ -72,6 +72,13 @@
       text-decoration: none;
     }
 
+    .header.setup-required .settings-link {
+      opacity: 0.5;
+      color: #999;
+      pointer-events: none;
+      cursor: not-allowed;
+    }
+
     .status-badge {
       display: flex;
       align-items: center;
@@ -486,7 +493,7 @@
 </head>
 <body>
   <div class="container">
-    <header class="header">
+    <header class="header setup-required" id="setup-header">
       <div class="logo-container">
         <span class="logo-text">OpenClaw 🤝 Convos</span>
       </div>
@@ -502,7 +509,8 @@
 
     <div class="main-content">
       <div class="card">
-        <h3>Connect via Convos</h3>
+        <h3>Convos (join via invite URL)</h3>
+        <p class="muted" style="margin-bottom: 16px;">E2E encrypted messaging via XMTP. Get an invite link from the Convos iOS app (conversation → + → share QR → Copy), or start here to create a new conversation and open the link in Convos.</p>
         <div class="qr-container">
           <img id="convos-qr" style="display: none; border-radius: 8px; width: 200px; height: 200px;" alt="Scan to connect" />
           <div id="convos-qr-wrap" style="display: none; width: 200px; height: 200px;"></div>

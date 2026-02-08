@@ -44,6 +44,7 @@
   // State tracking
   var convosJoined = false;
   var statusCheckInProgress = true;
+  var setupHeaderEl = document.getElementById('setup-header');
 
   function setStatus(text, state) {
     if (statusText) statusText.textContent = text;
@@ -159,6 +160,7 @@
       statusCheckInProgress = false;
       authGroupsData = j.authGroups || [];
       var ver = j.openclawVersion ? j.openclawVersion : '';
+      if (setupHeaderEl) setupHeaderEl.classList.toggle('setup-required', !j.convosConfigured);
       if (j.configured) {
         setStatus('Ready' + (ver ? ' - ' + ver : ''), 'success');
       } else {
