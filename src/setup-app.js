@@ -168,6 +168,12 @@
       renderAuth(authGroupsData);
       applyAuthSecretFromEnv();
 
+      var openclawHref = j.gatewayToken ? '/openclaw?token=' + encodeURIComponent(j.gatewayToken) : '/openclaw';
+      var linkHeader = document.getElementById('settings-link-header');
+      var linkAdvanced = document.getElementById('settings-link-advanced');
+      if (linkHeader) linkHeader.href = openclawHref;
+      if (linkAdvanced) linkAdvanced.href = openclawHref;
+
       setStartSetupLoading(false);
 
       // Load config editor content
