@@ -58,6 +58,22 @@
         statusDot.classList.add('error');
       }
     }
+    var settingsLink = document.getElementById('settings-link-header');
+    if (settingsLink) {
+      if (state === 'error') {
+        settingsLink.textContent = 'Refresh';
+        settingsLink.href = '#';
+        settingsLink.removeAttribute('target');
+        settingsLink.title = 'Refresh page';
+        settingsLink.onclick = function (e) { e.preventDefault(); location.reload(); };
+      } else {
+        settingsLink.textContent = 'Settings \u{1F980}';
+        settingsLink.href = '/openclaw';
+        settingsLink.setAttribute('target', '_blank');
+        settingsLink.title = 'Open OpenClaw UI';
+        settingsLink.onclick = null;
+      }
+    }
   }
 
   function showError(message) {
