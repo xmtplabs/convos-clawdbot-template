@@ -2,11 +2,17 @@
 
 1‑click deploy for **OpenClaw** on Railway with **/setup** wizard. Uses the [Convos channel](https://github.com/xmtplabs/openclaw/blob/feat/xmtp-and-convos-extensions/docs/channels/convos.md).
 
-[![Deploy on Railway](https://railway.com/button.svg)](https://railway.com/deploy/FO1OkS?referralCode=UxaXte&utm_medium=integration&utm_source=template&utm_campaign=generic)
+[![Deploy on Railway](https://railway.com/button.svg)](https://railway.com/deploy/convos-openclaw-template?referralCode=UxaXte&utm_medium=integration&utm_source=template&utm_campaign=generic)
 
 ### Setup
 
-> Convos extension is not in upstream OpenClaw yet. Use the [xmtplabs/openclaw](https://github.com/xmtplabs/openclaw) fork, branch `feat/xmtp-and-convos-extensions` ([PR #2](https://github.com/xmtplabs/openclaw/pull/2)).
+Install the Convos plugin, then configure:
+
+```bash
+openclaw plugins install @xmtplabs/convos
+```
+
+Alternative: use the [xmtplabs/openclaw](https://github.com/xmtplabs/openclaw) fork (branch `feat/xmtp-and-convos-extensions`) and run `openclaw plugins install ./extensions/convos` from the repo.
 
 **Option A — Invite link from Convos iOS**: Copy an invite URL from the app, then run `openclaw configure` and paste it.
 
